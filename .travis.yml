@@ -6,7 +6,7 @@ install:
   - composer install --no-interaction
   - composer require php-coveralls/php-coveralls:^1
 script:
-  - php vendor/bin/phpunit -c core/phpunit.xml.dist --testsuite unit --coverage-clover clover.xml
+  - php vendor/bin/phpunit -c core/phpunit.xml.dist --testsuite unit --exclude-group legacy --coverage-clover clover.xml
 
 after_success:
   - export CI_BUILD_NUMBER="$TRAVIS_BUILD_NUMBER"
