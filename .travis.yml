@@ -3,7 +3,7 @@ php:
   - 7.1
 
 install:
-  - composer install --dev --no-interaction
+  - composer install --no-interaction
   - composer require php-coveralls/php-coveralls:^1
 script:
   - php vendor/bin/phpunit -c core/phpunit.xml.dist --testsuite unit --group system --coverage-clover clover.xml
