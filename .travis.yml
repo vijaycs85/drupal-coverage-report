@@ -7,7 +7,7 @@ install:
   - php composer.phar install --dev --no-interaction
   - php composer.phar require php-coveralls/php-coveralls:^1
 script:
-  - php vendor/bin/phpunit -c core/phpunit.xml.dist --testsuite unit --group system --coverage-clover clover.xml
+  - php vendor/bin/phpunit -c core/phpunit.xml.dist --testsuite unit --coverage-clover clover.xml
 
 after_success:
   - php vendor/bin/coveralls -v
